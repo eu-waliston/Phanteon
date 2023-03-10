@@ -1,0 +1,8 @@
+.skill_name {
+    text-transform: capitalize;
+}
+
+.skill_infos {
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+}

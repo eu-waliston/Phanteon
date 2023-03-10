@@ -1,0 +1,11 @@
+.video {
+    border:none;
+    width: 540px;
+    height: 480px;
+    position: relative;
+    margin-top: 9px;
+    margin-left: 5px;
+
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}

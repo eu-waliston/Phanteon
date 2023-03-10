@@ -78,8 +78,7 @@
 .navbar li:hover {
     color: #fff;
     cursor: pointer;
-    transform: scale(1.1);
-    font-weight: 500;
+    transform: translateY(5px);
 }
 
 .price__section {
@@ -173,11 +172,26 @@
 
 }
 
-.click_event {
+.skill__border {
     padding: 7px 5px 2px 5px;
     border: 1px solid goldenrod;
 }
-
+.skill__border2 {
+    padding: 7px 5px 2px 5px;
+    border: 1px solid goldenrod;
+}
+.skill__border3 {
+    padding: 7px 5px 2px 5px;
+    border: 1px solid goldenrod;
+}
+.skill__border4 {
+    padding: 7px 5px 2px 5px;
+    border: 1px solid goldenrod;
+}
+.skill__border5 {
+    padding: 7px 5px 2px 5px;
+    border: 1px solid goldenrod;
+}
 
 hr {
     top: 3%;
@@ -194,4 +208,25 @@ hr {
     top: 30%;
     margin-left: 60%;
     border: 1px solid goldenrod;
+
+
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
 }
+
+.close_last_video {
+    display: none;
+    visibility: hidden;
+}
+
+.hidden__gold_border {
+    border: none;
+}
+
+.skills__info {
+    position: relative;
+    top: 20px;
+    color: bisque;
+    
+}
+
