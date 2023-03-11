@@ -1,0 +1,75 @@
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+}
+
+.logo {
+    width: 50px;
+}
+
+.logo2 {
+    width: 20px;
+    height: 20px;
+}
+
+
+.navbar {
+    display: flex;
+    list-style: none;
+    font-size: 1.2rem;
+    gap: 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 3px;
+
+}
+
+.navbar li {
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.navbar li:hover {
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(5px);
+}
+.price__section {
+    background-color: #073a31;
+    height: 40px;
+    width: 180px;
+    padding: 5px;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.39);
+
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+}
+
+.price__section:hover {
+    transition: .5s;
+    transform: translateY(4px);
+    cursor: pointer;
+}
+
+.price__section h2,
+.price__section h1 {
+
+    font-size: 1.3rem;
+    margin-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #85aab9;
+    font-weight: 400;
+    margin-left: -5px;
+}

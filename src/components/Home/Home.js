@@ -5,6 +5,9 @@ import blur_background from "../images/blur-fundo.png";
 import background from "../images/background-2.png";
 
 
+//Components
+import Navbar from "../Nav/Navbar";
+
 //Skills
 import Passiva from "../Skills/Passiva";
 import Q from "../Skills/Q";
@@ -13,11 +16,12 @@ import E from "../Skills/E";
 import R from "../Skills/R";
 
 //Skills Info
-import PassivaInfo  from "../skillsInfo/PassivaInfo";
+import PassivaInfo from "../skillsInfo/PassivaInfo";
 import QInfo from "../skillsInfo/QInfo";
 import WInfo from "../skillsInfo/WInfo";
 import EInfo from "../skillsInfo/EInfo";
 import RInfo from "../skillsInfo/RInfo";
+
 
 
 const Home = () => {
@@ -53,28 +57,7 @@ const Home = () => {
         <div className="home" style={{ backgroundImage: `url(${blur_background})` }}>
 
             <div className="home__section" style={{ backgroundImage: `url(${background})` }}>
-                <div className="nav">
-                    <div className="logo__section">
-                        <img src={require("../images/LOL-icon.png")} alt="logo" className="logo" />
-                    </div>
-
-                    <div className="navbar__section">
-                        <ul className="navbar">
-                            <li className="nav-itens" >home</li>
-                            <li className="nav-itens" >biography</li>
-                            <li className="nav-itens" >skins</li>
-                            <li className="nav-itens" >base statistics</li>
-                        </ul>
-                    </div>
-                    <div className="price__section">
-                        <h2 id="t1"><img className="logo2" src={require("../images/BE_icon.webp")} alt="icon" /> 3150</h2>
-                        <h1>/</h1>
-                        <h2 id="t2"><img className="logo2" src={require("../images/RP_icon.png")} alt="icon" />  790</h2>
-
-                    </div>
-                </div>
-
-
+                <Navbar />
                 <div className="info__section">
                     <h1>PANTHEON</h1>
                     <p>THE UNBREAKABLE SPEAR</p>
@@ -96,32 +79,32 @@ const Home = () => {
                     <div className="hability">
 
                         <div className="phanteon-passie" onClick={() => hangleClick1()}>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/passive/Pantheon_Passive.png" alt="Pantheon_Passive"  className={skills1 ? "skill__border" : "" } />
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/passive/Pantheon_Passive.png" alt="Pantheon_Passive" className={skills1 ? "skill__border" : ""} />
 
                         </div>
-                        <div className="phanteon-q"  onClick={() => hangleClick2()}>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonQ.png" alt="PantheonQ" className={skills2 ? "skill__border2" : ""}/>
+                        <div className="phanteon-q" onClick={() => hangleClick2()}>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonQ.png" alt="PantheonQ" className={skills2 ? "skill__border2" : ""} />
 
                         </div>
                         <div className="phanteon-w" onClick={() => hangleClick3()}>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonW.png" alt="PantheonW" className={skills3 ? "skill__border3" : ""}/>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonW.png" alt="PantheonW" className={skills3 ? "skill__border3" : ""} />
 
                         </div>
                         <div className="phanteon-e" onClick={() => hangleClick4()} >
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonE.png" alt="PantheonE" className={skills4 ? "skill__border4" : ""}/>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonE.png" alt="PantheonE" className={skills4 ? "skill__border4" : ""} />
 
                         </div>
-                        <div className="phanteon-r"  onClick={() => hangleClick5()}>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonR.png" alt="antheonR" className={skills5 ? "skill__border5" : ""}/>
+                        <div className="phanteon-r" onClick={() => hangleClick5()}>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.4.1/img/spell/PantheonR.png" alt="antheonR" className={skills5 ? "skill__border5" : ""} />
 
                         </div>
                     </div>
                     <div className="skills__info">
-                    {skills1 ? <PassivaInfo /> : ""}
-                    {skills2 ? <QInfo /> : ""}
-                    {skills3 ? <WInfo /> : ""}
-                    {skills4 ? <EInfo /> : ""}
-                    {skills5 ? <RInfo /> : ""}
+                        {skills1 ? <PassivaInfo /> : ""}
+                        {skills2 ? <QInfo /> : ""}
+                        {skills3 ? <WInfo /> : ""}
+                        {skills4 ? <EInfo /> : ""}
+                        {skills5 ? <RInfo /> : ""}
                     </div>
 
 
