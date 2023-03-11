@@ -39,7 +39,7 @@ const Skins = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <h1 className="text">Phanteon</h1>
+              <h1 className="text">PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_0.jpg")}
                 alt="Phanteon Skins"
@@ -48,7 +48,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">myrmidon phanteon</h1>
+            <h1 className="text">myrmidon PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_1.jpg")}
                 alt="Phanteon Skins"
@@ -57,7 +57,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">ruthless Phanteon</h1>
+            <h1 className="text">ruthless PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_2.jpg")}
                 alt="Phanteon Skins"
@@ -66,7 +66,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">perseus Phanteon</h1>
+            <h1 className="text">perseus PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_3.jpg")}
                 alt="Phanteon Skins"
@@ -75,7 +75,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">full metal Phanteon</h1>
+            <h1 className="text">full metal PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_4.jpg")}
                 alt="Phanteon Skins"
@@ -84,7 +84,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">glaive warrior Phanteon</h1>
+            <h1 className="text">glaive warrior PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_5.jpg")}
                 alt="Phanteon Skins"
@@ -93,7 +93,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">dragonslayer Phanteon</h1>
+            <h1 className="text">dragonslayer PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_6.jpg")}
                 alt="Phanteon Skins"
@@ -102,7 +102,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">zoombie Phanteon</h1>
+            <h1 className="text">zoombie PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_7.jpg")}
                 alt="Phanteon Skins"
@@ -111,7 +111,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">baker Phanteon</h1>
+            <h1 className="text">baker PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_8.jpg")}
                 alt="Phanteon Skins"
@@ -120,7 +120,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">pulsefire Phanteon</h1>
+            <h1 className="text">pulsefire PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_16.jpg")}
                 alt="Phanteon Skins"
@@ -138,7 +138,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text"> prestige ascended Phanteon</h1>
+            <h1 className="text"> prestige ascended PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_26.jpg")}
                 alt="Phanteon Skins"
@@ -147,7 +147,7 @@ const Skins = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-            <h1 className="text">ashen conqueror Phanteon</h1>
+            <h1 className="text">ashen conqueror PANTHEON</h1>
               <img
                 src={require("../images/Pantheon_36.jpg")}
                 alt="Phanteon Skins"
