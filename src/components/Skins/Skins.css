@@ -32,21 +32,22 @@
 .text {
     position: absolute;
     text-align: center;
-    color: #fff;
+    color: #daa520;
     top: 84%;
     left: 30%;
+
+    background-color: rgba(0, 0, 0, 0.575);
 
     font-family: Beaufort-Bold;
 
     text-transform: uppercase;
 
-    background-color: rgba(0, 0, 0, 0.596);
     border-radius: 5px;
     padding: 3px;
 }
 
 .avaliable {
-    color: #fff;
+    color: #daa520;
     font-size: 2.5rem;
     position: relative;
 

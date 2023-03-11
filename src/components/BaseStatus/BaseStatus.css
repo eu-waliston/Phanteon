@@ -1,0 +1,119 @@
+/*
+ font-family: Beaufort-Bold;
+ font-family: 'Poppins', sans-serif;
+*/
+
+.status__base_section {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    top: 5%;
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.base__statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px;
+
+    text-align: center;
+}
+
+.base_statics {
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: -30px;
+    font-family: Beaufort-Bold;
+    color: #daa520;
+}
+.dmg {
+    position: relative;
+    left: 120px;
+}
+
+.up {
+    position: relative;
+    top: -68px;
+}
+.up_ {
+    position: relative;
+    top: -120px;
+}
+
+.up__{
+    position: relative;
+    top: 50px;
+}
+.attack__speed , .unit__radius{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 20px;
+    text-align: center;
+}
+
+.bi, .fa-solid, .fa-regular {
+    font-size: 2.5rem;
+}
+
+.base__statistics p, .attack__speed p, .unit__radius p{
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+======== icons ======
+*/
+
+.fa-heart {
+    color: rgb(214, 26, 26);
+}
+
+.bi-shield-fill {
+    color: rgb(158, 42, 42);
+}
+
+.bi-record-circle-fill {
+    color: rgb(48, 48, 204);
+}
+
+.fa-gauge-high {
+    color: rgb(141, 190, 43);
+}
+
+.fa-droplet {
+    color: rgb(62, 90, 216);
+}
+
+.fa-hand-fist {
+    color: crimson;
+}
+.fa-burst {
+    color: rgb(177, 48, 9);
+}
+.fa-circle {
+    color: rgb(202, 183, 14);
+}
+
+.fa-arrows-to-dot {
+    color: rgb(146, 34, 34);
+}
+.fa-shoe-prints {
+    color: teal;
+}
+
+.fa-bullseye {
+    color: darkred;
+}
+
+.fa-hand {
+    color: rgb(13, 105, 74);
+}

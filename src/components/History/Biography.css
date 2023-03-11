@@ -41,8 +41,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.p2{
-    color: gold;
+.p2 {
+    color: #daa520;
     margin-top: 5px;
     font-size: 1.2rem;
     text-transform: capitalize;
@@ -63,11 +63,15 @@
 }
 
 .p4 {
-    color: gold;
+    color: #daa520;
     margin-top: 5px;
     font-size: 1.2rem;
     text-transform: capitalize;
     font-family: Beaufort-Bold;
+}
+
+.bio {
+    color: #daa520;
 }
 
 .status {
@@ -76,15 +80,19 @@
     position: relative;
 
 }
-.suqare__1, .suqare__2, .suqare__3 {
+
+.suqare__1,
+.suqare__2,
+.suqare__3 {
     position: relative;
     top: -20px;
     border-radius: 100px;
 }
+
 .suqare__1 {
     width: 40px;
     height: 25px;
-    background-color:#08D7F7;
+    background-color: #08D7F7;
 
 }
 
@@ -97,7 +105,7 @@
 .suqare__3 {
     width: 40px;
     height: 25px;
-    background-color:#013241;
+    background-color: #013241;
 
 
 }
@@ -123,4 +131,3 @@
 
     font-family: 'Poppins', sans-serif;
 }
-
