@@ -1,0 +1,126 @@
+/*
+======== BIOGRAPHY SECTION =========
+*/
+
+.byography {
+    width: 100%;
+    box-sizing: border-box;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 10%;
+    color: #fff;
+}
+
+/*
+======== ROLE SECTION =========
+*/
+
+.role {
+    width: 80px;
+    transition: .5s;
+}
+
+.role:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.role__square {
+    text-align: center;
+}
+
+.role__square p {
+    position: relative;
+    top: 10px;
+}
+
+.p1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.p2{
+    color: gold;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: Beaufort-Bold;
+}
+
+/*
+======== DIFICULT SECTION =========
+*/
+.dificult__square {
+
+    position: relative;
+    top: 7.5%;
+}
+
+.p3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.p4 {
+    color: gold;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: Beaufort-Bold;
+}
+
+.status {
+    display: flex;
+    gap: 5px;
+    position: relative;
+
+}
+.suqare__1, .suqare__2, .suqare__3 {
+    position: relative;
+    top: -20px;
+    border-radius: 100px;
+}
+.suqare__1 {
+    width: 40px;
+    height: 25px;
+    background-color:#08D7F7;
+
+}
+
+.suqare__2 {
+    width: 40px;
+    height: 25px;
+    background-color: #08D7F7;
+}
+
+.suqare__3 {
+    width: 40px;
+    height: 25px;
+    background-color:#013241;
+
+
+}
+
+/*
+    BIOGRAPHY SECTION
+*/
+
+
+
+.biography__Section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-family: Beaufort-Bold;
+}
+
+.biography__Section p {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+
+    font-family: 'Poppins', sans-serif;
+}
+

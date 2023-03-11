@@ -1,0 +1,56 @@
+.skins_slider_section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.img_skins {
+    width: 900px;
+
+}
+
+.swiper {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+
+
+}
+
+.skins_slider_section {
+    position: relative;
+    top: 5%;
+}
+
+.mySwiper {
+    position: relative;
+    margin-top: 2%;
+    margin-left: 30px !important;
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    top: 84%;
+    left: 30%;
+
+    font-family: Beaufort-Bold;
+
+    text-transform: uppercase;
+
+    background-color: rgba(0, 0, 0, 0.596);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.avaliable {
+    color: #fff;
+    font-size: 2.5rem;
+    position: relative;
+
+    font-family: Beaufort-Bold;
+
+    transform: rotate(90deg);
+}
