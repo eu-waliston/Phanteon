@@ -44,12 +44,12 @@
 }
 .up_ {
     position: relative;
-    top: -120px;
+    top: -75px;
 }
 
 .up__{
     position: relative;
-    top: 50px;
+    top: 58px;
 }
 .attack__speed , .unit__radius{
     display: grid;
