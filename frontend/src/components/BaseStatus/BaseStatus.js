@@ -2,7 +2,7 @@ import React from "react";
 import "./BaseStatus.css";
 
 import blur_background from "../images/blur-fundo.png";
-import background from "../images/Phanteon_background.png";
+import background from "../images/background-2.png";
 
 import Navbar from "../Nav/Navbar";
 

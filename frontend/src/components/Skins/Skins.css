@@ -32,19 +32,23 @@
 .text {
     position: absolute;
     text-align: center;
-    color: #daa520;
-    top: 84%;
-    left: 30%;
+    color: #daa520ce;
+    top: 90%;
+    left: 2%;
 
-    background-color: rgba(0, 0, 0, 0.575);
+    background-color: rgba(0, 0, 0, 0.274);
 
     font-family: Beaufort-Bold;
 
-    text-transform: uppercase;
 
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px;
+    padding-top: 0;
+
+    font-size: 1.4rem;
 }
+
+
 
 .avaliable {
     color: #daa520;
@@ -53,5 +57,8 @@
 
     font-family: Beaufort-Bold;
 
-    transform: rotate(90deg);
+    position: relative;
+
+    top: 310px;
+    left: 38%;
 }

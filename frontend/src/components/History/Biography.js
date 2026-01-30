@@ -2,7 +2,7 @@ import React from "react";
 import "./Biography.css";
 
 import blur_background from "../images/blur-fundo.png";
-import background from "../images/Phanteon_background.png";
+import background from "../images/background-2.png";
 
 import Navbar from "../Nav/Navbar";
 
@@ -20,8 +20,9 @@ const Biography = () => {
         <div className="byography">
             <div className="role__square">
                 <img src={require("../images/fighter.png")}  alt="role" className="role"/>
+                <img src={require("../images/Slayer.png")}  alt="role" className="role"/>
                 <p className="p1">role</p>
-                <p className="p2">fighter</p>
+                <p className="p2">Fighter / Assassin</p>
             </div>
             <div className="dificult__square">
                 <div className="status">
