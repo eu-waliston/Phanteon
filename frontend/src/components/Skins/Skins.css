@@ -62,3 +62,89 @@
     top: 310px;
     left: 38%;
 }
+
+@media (max-width: 1024px) {
+
+  .skins_slider_section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    top: 0;
+  }
+
+  /* título */
+  .avaliable {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 20px;
+  }
+
+  /* swiper container */
+  .swiper {
+    width: 90%;
+    height: auto;
+    left: 11px;
+  }
+
+  .mySwiper {
+    margin-left: 0 !important;
+  }
+
+  /* imagens */
+  .img_skins {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .avaliable {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+  }
+
+  .swiper {
+    width: 95%;
+  }
+
+  .img_skins {
+    max-height: 300px;
+  }
+
+  /* texto da skin */
+  .text {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .avaliable {
+    font-size: 1.6rem;
+  }
+
+  .img_skins {
+    max-height: 240px;
+  }
+
+  .text {
+    font-size: 1rem;
+    padding: 6px;
+  }
+}
+

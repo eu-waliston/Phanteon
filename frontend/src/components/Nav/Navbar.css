@@ -78,3 +78,20 @@
     text-decoration: none;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .price__section {
+    width: 160px;
+  }
+}

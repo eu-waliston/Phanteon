@@ -131,3 +131,73 @@
 
     font-family: 'Poppins', sans-serif;
 }
+
+@media (max-width: 1024px) {
+  .byography {
+    flex-direction: column;
+    height: auto;
+    top: 0;
+    padding: 40px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .role__square,
+  .dificult__square,
+  .biography__Section {
+    width: 100%;
+  }
+
+  .dificult__square {
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .role {
+    width: 60px;
+  }
+
+  .status {
+    justify-content: center;
+  }
+
+  .suqare__1,
+  .suqare__2,
+  .suqare__3 {
+    top: 0;
+  }
+
+  .p1,
+  .p3 {
+    font-size: 0.9rem;
+  }
+
+  .p2,
+  .p4 {
+    font-size: 1.1rem;
+  }
+
+  .biography__Section h3 {
+    font-size: 2rem;
+  }
+
+  .biography__Section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .biography__Section h3 {
+    font-size: 1.7rem;
+  }
+
+  .biography__Section p {
+    font-size: 0.9rem;
+  }
+}
+

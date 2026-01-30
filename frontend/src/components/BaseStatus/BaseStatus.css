@@ -117,3 +117,74 @@
 .fa-hand {
     color: rgb(13, 105, 74);
 }
+
+@media (max-width: 1024px) {
+
+  .status__base_section {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .status__base_section h1 {
+    text-align: center;
+  }
+
+  .status__base_section p {
+    text-align: center;
+  }
+
+  /* grids principais */
+  .base__statistics {
+    grid-template-columns: repeat(2, 120px);
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .attack__speed,
+  .unit__radius {
+    grid-template-columns: repeat(2, 120px);
+    justify-content: center;
+    gap: 25px;
+  }
+
+  /* remove offsets */
+  .dmg {
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+
+  .base_statics {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .status__base_section h1 {
+    font-size: 1.8rem;
+  }
+
+  .status__base_section p {
+    font-size: 0.95rem;
+  }
+
+  .base__statistics,
+  .attack__speed,
+  .unit__radius {
+    grid-template-columns: repeat(2, 100px);
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+
+  .base_statics {
+    font-size: 1.4rem;
+  }
+
+  .base__statistics,
+  .attack__speed,
+  .unit__radius {
+    grid-template-columns: repeat(2, 90px);
+  }
+}

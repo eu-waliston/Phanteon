@@ -96,18 +96,22 @@
     padding: 7px 5px 2px 5px;
     border: 1px solid goldenrod;
 }
+
 .skill__border2 {
     padding: 7px 5px 2px 5px;
     border: 1px solid goldenrod;
 }
+
 .skill__border3 {
     padding: 7px 5px 2px 5px;
     border: 1px solid goldenrod;
 }
+
 .skill__border4 {
     padding: 7px 5px 2px 5px;
     border: 1px solid goldenrod;
 }
+
 .skill__border5 {
     padding: 7px 5px 2px 5px;
     border: 1px solid goldenrod;
@@ -147,3 +151,126 @@ hr {
 
 }
 
+@media (max-width: 1024px) {
+    .home__section {
+        width: 90%;
+        margin-left: 5%;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .info__section {
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+    }
+
+    .info__section h1 {
+        font-size: 4rem;
+    }
+
+    .habilities__section {
+        width: 80%;
+        margin-left: 10%;
+        top: 0;
+    }
+
+    .suqare__skills__videos {
+        position: relative;
+        margin: 40px auto;
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
+        background-color: #000000;
+    }
+
+    .home__section {
+        position: relative;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    /* INFO (nome do campeão) */
+    .info__section {
+        width: 100%;
+        margin: 40px 0 20px 0;
+        text-align: center;
+    }
+
+    .info__section h1 {
+        font-size: 3rem;
+    }
+
+    .info__section p {
+        font-size: 1.2rem;
+    }
+
+    /* REMOVE posicionamentos forçados */
+    .habilities__section {
+        width: 100%;
+        margin: 0;
+        position: static;
+        text-align: center;
+    }
+
+    /* ÍCONES DAS SKILLS */
+    .hability {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    /* VÍDEO – AGORA VEM LOGO ABAIXO DO NOME */
+    .suqare__skills__videos {
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        top: 0;
+        border-radius: 25px;
+    }
+
+    /* TEXTO DA SKILL */
+    .skills__info {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    hr {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+
+    .info__section h1 {
+        font-size: 2.3rem;
+    }
+
+    .info__section p {
+        font-size: 1rem;
+    }
+
+    .habilities__section {
+        font-size: 1.1rem;
+    }
+
+    .suqare__skills__videos {
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
+}
