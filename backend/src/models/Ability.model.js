@@ -1,56 +1,56 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const abilitySchema = new mongoose.Schema({
   key: {
     type: String,
-    enum: ['P', 'Q', 'W', 'E', 'R'],
-    required: true
+    enum: ["P", "Q", "W", "E", "R"],
+    required: true,
   },
   name: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   champion: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Champion',
-    required: true
+    ref: "Champion",
+    required: true,
   },
   championName: {
     type: String,
-    required: true
+    required: true,
   },
   cooldown: {
-    type: String
+    type: String,
   },
   cost: {
-    type: String
+    type: String,
   },
   range: {
-    type: String
+    type: String,
   },
   effect: {
-    type: String
+    type: String,
   },
   videoUrl: {
-    type: String
+    type: String,
   },
   iconUrl: {
     type: String,
-    required: true
+    required: true,
   },
   order: {
     type: Number,
     min: 1,
-    max: 5
+    max: 5,
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
-module.exports = mongoose.model('Ability', abilitySchema);
+module.exports = mongoose.model("Ability", abilitySchema);

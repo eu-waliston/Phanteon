@@ -1,9 +1,9 @@
-const Skin = require('../models/Skin.model');
+const Skin = require("../models/Skin.model");
 
 // Buscar todas as skins
 exports.getAllSkins = async (req, res) => {
   try {
-    const skins = await Skin.find().populate('champion', 'name');
+    const skins = await Skin.find().populate("champion", "name");
     res.json(skins);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -25,7 +25,7 @@ exports.getSkinById = async (req, res) => {
   try {
     const skin = await Skin.findById(req.params.id);
     if (!skin) {
-      return res.status(404).json({ message: 'Skin não encontrada' });
+      return res.status(404).json({ message: "Skin não encontrada" });
     }
     res.json(skin);
   } catch (error) {
@@ -38,7 +38,9 @@ exports.createSkin = async (req, res) => {
   try {
     const skinData = {
       ...req.body,
-      splashArt: req.file ? `/uploads/${req.file.filename}` : req.body.splashArt
+      splashArt: req.file
+        ? `/uploads/${req.file.filename}`
+        : req.body.splashArt,
     };
 
     const skin = new Skin(skinData);
@@ -58,14 +60,13 @@ exports.updateSkin = async (req, res) => {
       skinData.splashArt = `/uploads/${req.file.filename}`;
     }
 
-    const skin = await Skin.findByIdAndUpdate(
-      req.params.id,
-      skinData,
-      { new: true, runValidators: true }
-    );
+    const skin = await Skin.findByIdAndUpdate(req.params.id, skinData, {
+      new: true,
+      runValidators: true,
+    });
 
     if (!skin) {
-      return res.status(404).json({ message: 'Skin não encontrada' });
+      return res.status(404).json({ message: "Skin não encontrada" });
     }
 
     res.json(skin);
@@ -80,10 +81,10 @@ exports.deleteSkin = async (req, res) => {
     const skin = await Skin.findByIdAndDelete(req.params.id);
 
     if (!skin) {
-      return res.status(404).json({ message: 'Skin não encontrada' });
+      return res.status(404).json({ message: "Skin não encontrada" });
     }
 
-    res.json({ message: 'Skin deletada com sucesso' });
+    res.json({ message: "Skin deletada com sucesso" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

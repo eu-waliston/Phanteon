@@ -1,20 +1,20 @@
-const Champion = require('../models/Champion.model');
-const Skin = require('../models/Skin.model');
-const Ability = require('../models/Ability.model');
+const Champion = require("../models/Champion.model");
+const Skin = require("../models/Skin.model");
+const Ability = require("../models/Ability.model");
 
 // Buscar todos os campeões
 exports.getAllChampions = async (req, res) => {
   try {
-    const { limit = 50, page = 1, sort = 'name', order = 'asc' } = req.query;
+    const { limit = 50, page = 1, sort = "name", order = "asc" } = req.query;
 
-    const sortOrder = order === 'desc' ? -1 : 1;
+    const sortOrder = order === "desc" ? -1 : 1;
     const skip = (parseInt(page) - 1) * parseInt(limit);
 
     const champions = await Champion.find()
       .sort({ [sort]: sortOrder })
       .skip(skip)
       .limit(parseInt(limit))
-      .populate('skins abilities');
+      .populate("skins abilities");
 
     const total = await Champion.countDocuments();
 
@@ -24,8 +24,8 @@ exports.getAllChampions = async (req, res) => {
         page: parseInt(page),
         limit: parseInt(limit),
         total,
-        pages: Math.ceil(total / parseInt(limit))
-      }
+        pages: Math.ceil(total / parseInt(limit)),
+      },
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -37,7 +37,7 @@ exports.getActiveChampions = async (req, res) => {
   try {
     const champions = await Champion.find({ active: true })
       .sort({ name: 1 })
-      .populate('skins');
+      .populate("skins");
 
     res.json(champions);
   } catch (error) {
@@ -50,7 +50,7 @@ exports.getFeaturedChampions = async (req, res) => {
   try {
     const champions = await Champion.find({ featured: true, active: true })
       .sort({ updatedAt: -1 })
-      .populate('skins');
+      .populate("skins");
 
     res.json(champions);
   } catch (error) {
@@ -62,11 +62,11 @@ exports.getFeaturedChampions = async (req, res) => {
 exports.getChampionById = async (req, res) => {
   try {
     const champion = await Champion.findById(req.params.id)
-      .populate('skins')
-      .populate('abilities');
+      .populate("skins")
+      .populate("abilities");
 
     if (!champion) {
-      return res.status(404).json({ message: 'Campeão não encontrado' });
+      return res.status(404).json({ message: "Campeão não encontrado" });
     }
 
     res.json(champion);
@@ -79,13 +79,13 @@ exports.getChampionById = async (req, res) => {
 exports.getChampionByName = async (req, res) => {
   try {
     const champion = await Champion.findOne({
-      name: { $regex: new RegExp(req.params.name, 'i') }
+      name: { $regex: new RegExp(req.params.name, "i") },
     })
-    .populate('skins')
-    .populate('abilities');
+      .populate("skins")
+      .populate("abilities");
 
     if (!champion) {
-      return res.status(404).json({ message: 'Campeão não encontrado' });
+      return res.status(404).json({ message: "Campeão não encontrado" });
     }
 
     res.json(champion);
@@ -99,10 +99,10 @@ exports.getChampionsByRole = async (req, res) => {
   try {
     const champions = await Champion.find({
       role: req.params.role,
-      active: true
+      active: true,
     })
-    .sort({ name: 1 })
-    .populate('skins');
+      .sort({ name: 1 })
+      .populate("skins");
 
     res.json(champions);
   } catch (error) {
@@ -119,9 +119,9 @@ exports.searchChampions = async (req, res) => {
 
     if (q) {
       query.$or = [
-        { name: { $regex: q, $options: 'i' } },
-        { title: { $regex: q, $options: 'i' } },
-        { description: { $regex: q, $options: 'i' } }
+        { name: { $regex: q, $options: "i" } },
+        { title: { $regex: q, $options: "i" } },
+        { description: { $regex: q, $options: "i" } },
       ];
     }
 
@@ -139,7 +139,7 @@ exports.searchChampions = async (req, res) => {
 
     const champions = await Champion.find(query)
       .sort({ name: 1 })
-      .populate('skins');
+      .populate("skins");
 
     res.json(champions);
   } catch (error) {
@@ -154,18 +154,22 @@ exports.createChampion = async (req, res) => {
 
     // Processar upload de imagens
     if (req.files) {
-      if (req.files['splashArt']) {
-        championData.splashArt = `/uploads/${req.files['splashArt'][0].filename}`;
+      if (req.files["splashArt"]) {
+        championData.splashArt = `/uploads/${req.files["splashArt"][0].filename}`;
       }
-      if (req.files['icon']) {
-        championData.icon = `/uploads/${req.files['icon'][0].filename}`;
+      if (req.files["icon"]) {
+        championData.icon = `/uploads/${req.files["icon"][0].filename}`;
       }
     }
 
     // Validar se já existe campeão com este nome
-    const existingChampion = await Champion.findOne({ name: championData.name });
+    const existingChampion = await Champion.findOne({
+      name: championData.name,
+    });
     if (existingChampion) {
-      return res.status(400).json({ message: 'Já existe um campeão com este nome' });
+      return res
+        .status(400)
+        .json({ message: "Já existe um campeão com este nome" });
     }
 
     const champion = new Champion(championData);
@@ -173,9 +177,9 @@ exports.createChampion = async (req, res) => {
 
     res.status(201).json(newChampion);
   } catch (error) {
-    if (error.name === 'ValidationError') {
-      const messages = Object.values(error.errors).map(err => err.message);
-      return res.status(400).json({ message: messages.join(', ') });
+    if (error.name === "ValidationError") {
+      const messages = Object.values(error.errors).map((err) => err.message);
+      return res.status(400).json({ message: messages.join(", ") });
     }
     res.status(400).json({ message: error.message });
   }
@@ -188,11 +192,11 @@ exports.updateChampion = async (req, res) => {
 
     // Processar upload de imagens
     if (req.files) {
-      if (req.files['splashArt']) {
-        championData.splashArt = `/uploads/${req.files['splashArt'][0].filename}`;
+      if (req.files["splashArt"]) {
+        championData.splashArt = `/uploads/${req.files["splashArt"][0].filename}`;
       }
-      if (req.files['icon']) {
-        championData.icon = `/uploads/${req.files['icon'][0].filename}`;
+      if (req.files["icon"]) {
+        championData.icon = `/uploads/${req.files["icon"][0].filename}`;
       }
     }
 
@@ -203,14 +207,14 @@ exports.updateChampion = async (req, res) => {
     );
 
     if (!champion) {
-      return res.status(404).json({ message: 'Campeão não encontrado' });
+      return res.status(404).json({ message: "Campeão não encontrado" });
     }
 
     res.json(champion);
   } catch (error) {
-    if (error.name === 'ValidationError') {
-      const messages = Object.values(error.errors).map(err => err.message);
-      return res.status(400).json({ message: messages.join(', ') });
+    if (error.name === "ValidationError") {
+      const messages = Object.values(error.errors).map((err) => err.message);
+      return res.status(400).json({ message: messages.join(", ") });
     }
     res.status(400).json({ message: error.message });
   }
@@ -227,12 +231,12 @@ exports.deleteChampion = async (req, res) => {
     const champion = await Champion.findByIdAndDelete(req.params.id);
 
     if (!champion) {
-      return res.status(404).json({ message: 'Campeão não encontrado' });
+      return res.status(404).json({ message: "Campeão não encontrado" });
     }
 
     res.json({
-      message: 'Campeão e dados relacionados deletados com sucesso',
-      champion
+      message: "Campeão e dados relacionados deletados com sucesso",
+      champion,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -245,15 +249,17 @@ exports.toggleActive = async (req, res) => {
     const champion = await Champion.findById(req.params.id);
 
     if (!champion) {
-      return res.status(404).json({ message: 'Campeão não encontrado' });
+      return res.status(404).json({ message: "Campeão não encontrado" });
     }
 
     champion.active = !champion.active;
     await champion.save();
 
     res.json({
-      message: `Campeão ${champion.active ? 'ativado' : 'desativado'} com sucesso`,
-      champion
+      message: `Campeão ${
+        champion.active ? "ativado" : "desativado"
+      } com sucesso`,
+      champion,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -266,15 +272,17 @@ exports.toggleFeatured = async (req, res) => {
     const champion = await Champion.findById(req.params.id);
 
     if (!champion) {
-      return res.status(404).json({ message: 'Campeão não encontrado' });
+      return res.status(404).json({ message: "Campeão não encontrado" });
     }
 
     champion.featured = !champion.featured;
     await champion.save();
 
     res.json({
-      message: `Campeão ${champion.featured ? 'adicionado aos' : 'removido dos'} destaques`,
-      champion
+      message: `Campeão ${
+        champion.featured ? "adicionado aos" : "removido dos"
+      } destaques`,
+      champion,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
